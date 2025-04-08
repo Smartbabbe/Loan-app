@@ -15,7 +15,7 @@ import Profile from '@/components/ui/Dashboard/Profile';
 import Wallet from '@/components/ui/Dashboard/Wallet';
 import IndividualProfile from '@/components/ui/Dashboard/IndividualProfile';
 
-const page = () => {
+const Page = () => {
   const [activeMenu, setActiveMenu] = useState('Profile');
 
   // Function to change active menu and content
@@ -47,4 +47,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

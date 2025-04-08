@@ -9,7 +9,7 @@ import addIcon from '@/assets/addicon.svg';
 import React from 'react';
 import profileimg from '@/assets/dashboardprofileimg.svg'
 
-const page = () => {
+const Page = () => {
 
   const profileData = 
     {name: 'David Philips',
@@ -75,4 +75,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

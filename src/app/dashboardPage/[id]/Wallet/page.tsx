@@ -16,7 +16,7 @@ import Wallet from '@/components/ui/Dashboard/Wallet';
 import IndividualProfile from '@/components/ui/Dashboard/IndividualProfile';
 
 
-const page = () => {
+const Page = () => {
   // State to store active menu
   const [activeMenu, setActiveMenu] = useState('Wallet');
 
@@ -49,4 +49,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

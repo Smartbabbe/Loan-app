@@ -1,4 +1,3 @@
-import { Content } from 'next/font/google';
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
 import Description from '../Forms/DescriptionTag';

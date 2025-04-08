@@ -1,4 +1,3 @@
-import { Content } from 'next/font/google';
 import React, { ReactNode } from 'react';
 
 
