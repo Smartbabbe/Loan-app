@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Description from '../Forms/DescriptionTag';
 import editIcon from '@/assets/edit.svg';
