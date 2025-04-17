@@ -32,20 +32,17 @@ const Page = () => {
         <DashboardHeader headertitle={activeMenu} />
         <LeftRightLayout
           leftSide={<LeftSideBar onMenuClick={handleMenuClick} />}
-          rightSide={
-            <RightSide>
-              {activeMenu === 'Dashboard' && <BlankDashboardPage />}
-              {activeMenu === 'Apply for loans' && <ApplyForLoans />}
-              {activeMenu === 'Individual Profile' && <IndividualProfile />}
-              {activeMenu === 'Business Profile' && <BusinessProfile />}
-              {activeMenu === 'Manage loans' && <ManageLoans />}
-              {activeMenu === 'Wallet' && <Wallet />}
-              {activeMenu === 'Transactions' && <Transactions />}
-              {activeMenu === 'Query' && <Query />}
-              {activeMenu === 'Profile' && <Profile />}
-            </RightSide>
-          }
-        />
+          rightSide={<RightSide>
+            {activeMenu === 'Dashboard' && <BlankDashboardPage />}
+            {activeMenu === 'Apply for loans' && <ApplyForLoans />}
+            {activeMenu === 'Individual Profile' && <IndividualProfile />}
+            {activeMenu === 'Business Profile' && <BusinessProfile />}
+            {activeMenu === 'Manage loans' && <ManageLoans />}
+            {activeMenu === 'Wallet' && <Wallet />}
+            {activeMenu === 'Transactions' && <Transactions />}
+            {activeMenu === 'Query' && <Query />}
+            {activeMenu === 'Profile' && <Profile />}
+          </RightSide>} className={''}        />
       </DashboardLayout>
     </div>
   );
