@@ -22,6 +22,7 @@ import {
 import TransactionCard from './TransactionCard';
 import Image from 'next/image';
 import FormSectionTitle from '../Forms/FormSectionTitle';
+import DateRangeButton from './DateRangeButton';
 
 const DashboardFull = () => {
 
@@ -91,9 +92,25 @@ const DashboardFull = () => {
 
   return (
     <>
-      <div className="flex w-full flex-col text-left self-start">
-        <FormSectionTitle title={'Financial summary'} className={''} />
-        <p>You are eligible for 50% overdraft</p>
+      <div className="flex w-full max-lg:order-2 flex-col text-left self-start">
+        <div className='max-lg:text-center max-lg:mt-5'>
+          <FormSectionTitle title={'Financial summary'} className={'max-lg:text-3xl'} />
+          <p>You are eligible for 50% overdraft</p>          
+        </div>
+        <div className='flex gap-4 justify-between sm:gap-8 md:gap-16 my-5 max-md:flex-wrap'>
+          <div className='flex items-center gap-4 px-4 py-2 shadow-md hover:shadow-lg transition bg-white rounded'>
+            <div className='flex items-center gap-2'>
+              <div className='size-3 bg-gradient-to-b from-[#B353FF] via-gray/50 to-[#7ED1FF]'></div>
+              <p>Income</p>
+            </div>
+            <div className='flex items-center gap-2'>
+              <div className='size-3 bg-red-400'></div>
+              <div>Expenses</div>
+            </div>
+          </div>
+          <DateRangeButton placeholder="Past 6 months" />
+        </div>
+
         <div className="mt-4 pl-4 w-full">
           <ResponsiveContainer width="100%" height={300}>
             <BarChart
@@ -138,15 +155,19 @@ const DashboardFull = () => {
         </div>
 
         {/* Wallet Summary Heading */}
+        <div className='flex justify-between items-center gap-4 sm:gap-8 md:gap-16 my-5 flex-wrap'>
+          <FormSectionTitle
+            title={'Wallet Summary'}
+            className={'text-center mt-6'}
+          /> 
+          <DateRangeButton placeholder="May" />        
+        </div>
 
-        <FormSectionTitle
-          title={'Wallet Summary'}
-          className={'text-center mt-6'}
-        />
+
         {/* Two Independent Pie Chart Containers Side by Side */}
-        <div className="flex gap-6 items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
           {/* Pie Chart: Income vs Expenses */}
-          <div className="w-full p-6">
+          <div className="w-full text-center p-6">
             <h3 className="text-lg font-semibold mb-2">Income vs Expenses</h3>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
@@ -172,7 +193,7 @@ const DashboardFull = () => {
           </div>
 
           {/* Pie Chart: Expense Breakdown */}
-          <div className="w-full">
+          <div className="w-full text-center p-6">
             <h3 className="text-lg font-semibold mb-2">Expense Breakdown</h3>
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
@@ -205,6 +226,7 @@ const DashboardFull = () => {
           name={profileData.name}
           bank={profileData.bank}
           phoneNumber={profileData.phoneNumber}
+          className='lg:w-4/5 m-auto'
         />
         <div className="flex justify-center">
           <Image src={leftarrow} alt={'left arrow'} />

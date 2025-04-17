@@ -19,33 +19,36 @@ const BusinessType = () => {
 
   return (
     <FormCard>
-        <Header  title="Business Account" className={undefined}  />
-        <Description text="Hello! Tell us a little about your business" className={'mb-10'} />
+      <Header title="Business Account" className={`text-center`} />
+      <Description
+        text="Hello! Tell us a little about your business"
+        className={'mb-10 text-center'}
+      />
+      <div className="w-full space-y-5">
         {businessFields.map((field) => (
-          <div key={field.id} className="w-full">
-            <div className="">
-              <label
-                key={field.id}
-                className="font-light py-2 text-[#00160a] text-2xl block"
-              >
-                {field.label}
-              </label>
-              <Input
-                id={field.id}
-                type={field.type}
-                className="h-[53px] bg-[#f7f8f8] rounded-[5px] border-none"
-              />
-            </div>
+          <div key={field.id} className="">
+            <label
+              key={field.id}
+              className="font-light py-2 text-[#00160a] text-2xl block"
+            >
+              {field.label}
+            </label>
+            <Input
+              id={field.id}
+              type={field.type}
+              className="h-[53px] bg-[#f7f8f8] rounded-[5px] border-none"
+            />
           </div>
         ))}
 
-        <div className="pt-7 w-3/4">
+        <div className="pt-7 w-3/4 m-auto">
           <Link href="/dashboardPage/page.tsx" legacyBehavior>
-          <a className="w-full">
+            <a className="w-full">
               <Button buttonName="Create Account" />
             </a>
           </Link>
         </div>
+      </div>
     </FormCard>
   );
 };

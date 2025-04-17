@@ -29,7 +29,7 @@ const TransactionCard = ({ transactions }: Props) => {
       {transactions.map((txn) => (
         <div
           key={txn.id}
-          className="bg-white w-3/5 mt-3 rounded-md p-3 shadow-xl mb-4 flex justify-between items-center"
+          className="bg-white w-full md:w-4/5 lg:w-3/5 mt-3 rounded-md p-3 shadow-xl mb-4 flex justify-between items-center"
         >
           <div className="flex gap-2">
             <Image  src={getIcon(txn.status)} alt={'status icon'} width={40} height={40} />

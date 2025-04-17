@@ -22,7 +22,7 @@ const ProfileCard = ({
   return (
     <div className={`w-full flex justify-center my-5  ${className}`}>
       <div
-        className={`w-3/5 relative p-2 m-auto shadow-xl bg-white flex flex-col items-center h-52 rounded-lg ${className}`}
+        className={`w-full sm:w-4/5 lg:w-3/5 relative p-2 m-auto shadow-xl bg-white flex flex-col items-center h-52 rounded-lg ${className}`}
       >
         {profileImage && (
           <Image
@@ -33,7 +33,7 @@ const ProfileCard = ({
             height={100}
           />
         )}
-        <Description text={`${name}`} className={'mb-0 mt-2'} />
+        <Description text={`${name}`} className={'mb-0 mt-2 font-[600]'} />
         <p className="mt-0">{bank}</p>
         <p>{phoneNumber}</p>
         <Image

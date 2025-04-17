@@ -20,10 +20,10 @@ const SignUpPage = (): JSX.Element => {
   return (
     <FormCard>
       <Header title="Welcome!" className={undefined} />
-      <Description text="We're glad to have you here! Create an Account" className={'mb-10'} />
+      <Description text="We're glad to have you here! Create an Account" className={'mb-10 text-center'} />
 
       {formFields.map((field) => (
-          <div key={field.id} className="w-full">
+          <div key={field.id} className="w-full mb-4">
             <div className="">
               <label
                 htmlFor={field.id}
@@ -40,7 +40,7 @@ const SignUpPage = (): JSX.Element => {
           </div>
         ))}
 
-        <div className="pt-4 w-3/4">
+        <div className="pt-4 w-3/4 mb-3">
           <Link href="/popUpPages/1/individualType" legacyBehavior>
             <a className="">
               <Button buttonName="Sign Up" />

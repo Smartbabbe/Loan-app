@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ButtonProps {
   buttonName: string;
-  className?: string; // Optional className
+  className?: string;
 }
 
 const Button = ({ buttonName, className }: ButtonProps) => {

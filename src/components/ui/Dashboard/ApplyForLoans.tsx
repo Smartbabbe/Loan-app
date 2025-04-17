@@ -43,7 +43,7 @@ const ApplyForLoans = () => {
   ];
 
   return (
-    <div className="w-full bg-white shadow-2xl rounded-md p-5 mb-5">
+    <div className="w-3/5 bg-white shadow-2xl rounded-md p-5 mb-5">
       <FormSectionTitle title="Loan Details" className="" />
       <div className="flex gap-x-16">
         {loanDetailsFields.map((field) =>
