@@ -29,7 +29,7 @@ const Page = () => {
   return (
     <div>
       <DashboardLayout>
-        <DashboardHeader headertitle={activeMenu} />
+        <DashboardHeader headertitle={activeMenu} className='max-md:text-2xl' />
         <LeftRightLayout
           leftSide={<LeftSideBar onMenuClick={handleMenuClick} />}
           rightSide={<RightSide>
