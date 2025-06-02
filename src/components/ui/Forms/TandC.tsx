@@ -18,17 +18,17 @@ const TandC = () => {
     <div className='w-full'>
       <div className="mb-2">
         {options.map((option) => (
-          <label key={option.id} className="flex items-center gap-4">
+          <label key={option.id} className="flex items-center gap-4 mt-2">
             <input
               type={option.type}
               value={option.label}
-              className="mt-2 size-6"
+              className="w-5 h-5 accent-primary"
             />
             <span className="mt-2">{option.label}</span>
           </label>
         ))}
       </div>
-      <p>
+      <p className='mt-4'>
         I have read, understood & accept all the Terms and Conditions, and
         Privacy Policy for Simple Finance Limited.{' '}
       </p>

@@ -4,7 +4,7 @@ import TextInputWithLabel from './TextInputWithLabel';
 const FormInputGroup = ({
   fields,
 }: {
-  fields: { id: string | number; label: string; type: string; order?: number }[];
+  fields: { id: string | number; label: string; type: string; order?: number; }[];
 }) => (
   <>
     {fields.map((field, idx) => (

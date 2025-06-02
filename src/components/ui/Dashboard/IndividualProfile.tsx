@@ -71,11 +71,11 @@ const IndividualProfile = () => {
   };
 
   return (
-    <div className=" bg-white py-4 px-7 mb-7 rounded-lg h-fit">
+    <div className=" bg-white py-4 px-7 mb-7  box-border rounded-lg h-fit">
       {/* Personal info */}
-      <div className="">
-        <FormSectionTitle title={'Personal Information'} className={''} />
-        <div className="grid grid-cols-4 gap-x-16">
+      <div className="mb-7">
+        <FormSectionTitle title={'Personal Information'} className={'max-sm:text-2xl max-lg:text-center'} />
+        <div className="grid grid-col gap-y-7 justify-center sm:grid-cols-2 lg:grid-cols-4 gap-x-16">
           <FormInputGroup fields={personalInfoFields} />
           <div className="order-2">
             <SelectWithLabel
@@ -90,9 +90,9 @@ const IndividualProfile = () => {
       <hr />
 
       {/* Next of kin */}
-      <div className="mt-7">
-        <FormSectionTitle title={'Next of Kin Information'} className={''} />
-        <div className="grid grid-cols-4 gap-x-16">
+      <div className="my-7">
+        <FormSectionTitle title={'Next of Kin Information'} className={'max-sm:text-2xl max-lg:text-center'} />
+        <div className="mt-9 grid grid-col gap-y-3 justify-center sm:grid-cols-2 lg:grid-cols-4 gap-x-16">
           <SelectWithLabel
             id={nextOfKinFirst.id}
             label={nextOfKinFirst.label}
@@ -105,14 +105,14 @@ const IndividualProfile = () => {
       <hr />
 
       {/* Government issued ID */}
-      <div className="flex gap-[10rem] items-center mt-7">
+      <div className="flex max-lg:flex-col gap-8 lg:gap-[10rem] lg:items-center my-7">
         <div>
           <FormSectionTitle
             title={'Government-issued ID Verification'}
-            className={''}
+            className={'max-lg:text-center'}
           />
 
-          <div className="flex gap-12 justify-between w-full">
+          <div className="flex mt-9 gap-6 lg:gap-12 max-sm:justify-center lg:justify-between lg:w-full max-lg:flex-wrap">
             <SelectWithLabel
               id={govIdTypes.id}
               label={govIdTypes.label}
@@ -123,27 +123,31 @@ const IndividualProfile = () => {
               id={uploadField.id}
               label={uploadField.label}
               type={uploadField.type}
+              className=''
             />
           </div>
         </div>
 
-        <div className="">
-          <FormSectionTitle title={'BVN Verification'} className={''} />
-          <TextInputWithLabel
-            id={BVNField.id}
-            label={BVNField.label}
-            type={BVNField.type}
-          />
+        <div className="max-md:mt-9">
+          <FormSectionTitle title={'BVN Verification'} className={'max-sm:text-2xl max-lg:text-center'} />
+          <div className='mx-auto w-fit'>
+            <TextInputWithLabel
+              id={BVNField.id}
+              label={BVNField.label}
+              type={BVNField.type}
+            />            
+          </div>
+
         </div>
       </div>
 
       <hr />
-      <div className="flex items-center mt-5">
+      <div className="flex items-center mt-5 max-lg:flex-col max-lg:gap-6">
         <TandC />
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <Link href="/dashboardPage/1/Business-profile" legacyBehavior>
             <a href="">
-              <Button buttonName={'Next'} className="mx-4" />
+              <Button buttonName={'Next'} className="mx-4 max-md:ml-0" />
             </a>
           </Link>
         </div>

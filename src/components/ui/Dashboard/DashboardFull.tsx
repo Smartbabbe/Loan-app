@@ -25,7 +25,6 @@ import FormSectionTitle from '../Forms/FormSectionTitle';
 import DateRangeButton from './DateRangeButton';
 
 const DashboardFull = () => {
-
   // Data for the bar and line chart.
   const financialData = [
     { month: 'JAN', income: 95000, expenses: 30000 },
@@ -93,18 +92,21 @@ const DashboardFull = () => {
   return (
     <>
       <div className="flex w-full max-lg:order-2 flex-col text-left self-start">
-        <div className='max-lg:text-center max-lg:mt-5'>
-          <FormSectionTitle title={'Financial summary'} className={'max-lg:text-3xl'} />
-          <p>You are eligible for 50% overdraft</p>          
+        <div className="max-lg:text-center max-lg:mt-5">
+          <FormSectionTitle
+            title={'Financial summary'}
+            className={'max-lg:text-3xl'}
+          />
+          <p>You are eligible for 50% overdraft</p>
         </div>
-        <div className='flex gap-4 justify-between sm:gap-8 md:gap-16 my-5 max-md:flex-wrap'>
-          <div className='flex items-center gap-4 px-4 py-2 shadow-md hover:shadow-lg transition bg-white rounded'>
-            <div className='flex items-center gap-2'>
-              <div className='size-3 bg-gradient-to-b from-[#B353FF] via-gray/50 to-[#7ED1FF]'></div>
+        <div className="flex gap-4 justify-between sm:gap-8 md:gap-16 my-5 max-md:flex-wrap">
+          <div className="flex items-center gap-4 px-4 py-2 shadow-md hover:shadow-lg transition bg-white rounded">
+            <div className="flex items-center gap-2">
+              <div className="size-3 bg-gradient-to-b from-[#B353FF] via-gray/50 to-[#7ED1FF]"></div>
               <p>Income</p>
             </div>
-            <div className='flex items-center gap-2'>
-              <div className='size-3 bg-red-400'></div>
+            <div className="flex items-center gap-2">
+              <div className="size-3 bg-red-400"></div>
               <div>Expenses</div>
             </div>
           </div>
@@ -155,14 +157,13 @@ const DashboardFull = () => {
         </div>
 
         {/* Wallet Summary Heading */}
-        <div className='flex justify-between items-center gap-4 sm:gap-8 md:gap-16 my-5 flex-wrap'>
+        <div className="flex lg:justify-between justify-center items-center gap-4 sm:gap-8 md:gap-16 my-5 flex-wrap">
           <FormSectionTitle
             title={'Wallet Summary'}
             className={'text-center mt-6'}
-          /> 
-          <DateRangeButton placeholder="May" />        
+          />
+          <DateRangeButton placeholder="May" />
         </div>
-
 
         {/* Two Independent Pie Chart Containers Side by Side */}
         <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
@@ -226,11 +227,11 @@ const DashboardFull = () => {
           name={profileData.name}
           bank={profileData.bank}
           phoneNumber={profileData.phoneNumber}
-          className='lg:w-4/5 m-auto'
+          className="lg:w-4/5 m-auto"
         />
-        <div className="flex justify-center">
-          <Image src={leftarrow} alt={'left arrow'} />
-          <VirtualCard className="text-white p-0 flex items-between relative">
+        <div className="flex max-md:flex-col justify-center items-center">
+          <Image src={leftarrow} alt={'left arrow'} className="max-md:hidden" />
+          <VirtualCard className="w-full flex flex-col justify-between mb-4 text-white p-0 relative">
             <div className="w-full p-4 flex justify-between">
               <div>
                 <p>Current Balance</p>
@@ -245,7 +246,16 @@ const DashboardFull = () => {
               <p>{profileData.expiryDate}</p>
             </div>
           </VirtualCard>
-          <Image src={rightarrow} alt={'right arrow'} />
+          <Image
+            src={rightarrow}
+            alt={'right arrow'}
+            className="max-md:hidden"
+          />
+        </div>
+
+        <div className="hidden max-md:flex mb-4 justify-center">
+          <Image src={leftarrow} alt="left arrow" />
+          <Image src={rightarrow} alt="right arrow" />
         </div>
 
         <div className="flex w-3/5 m-auto justify-center gap-2">

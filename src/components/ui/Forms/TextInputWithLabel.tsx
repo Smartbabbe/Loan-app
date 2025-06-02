@@ -1,27 +1,31 @@
 import React from 'react';
-import Input from '../FormInput';
 
-
-interface TextInputWithLabelProps {
+interface TextInputWithLabelProps extends React.InputHTMLAttributes<HTMLInputElement> {
   id: string;
   label: string;
-  type: string;
-  placeholder?: string;
+  className?: string;
 }
 
-
-const TextInputWithLabel = ({ id, label, type, placeholder }: TextInputWithLabelProps ) => (
-  <div className="flex flex-col w-[250px]">
-    <label htmlFor={id} className="font text-[#00160a] text-md">
-      {label}
-    </label>
-    <Input
-      id={id}
-      type={type}
-      placeholder={placeholder}
-      className="h-[35px] outline-none mt-4 mb-8 bg-gray-100 rounded-[2px] border-none"
-    />
-  </div>
-);
+const TextInputWithLabel: React.FC<TextInputWithLabelProps> = ({
+  id,
+  label,
+  className = '',
+  type = 'text',
+  ...props
+}) => {
+  return (
+    <div className={`flex flex-col w-full max-w-[10rem] md:max-w-[18rem] ${className}`}>
+      <label htmlFor={id} className="text-[#00160a] text-sm sm:text-base mb-1">
+        {label}
+      </label>
+      <input
+        id={id}
+        type={type}
+        className="px-3 py-2 text-sm sm:text-base bg-gray-100 rounded outline-none"
+        {...props}
+      />
+    </div>
+  );
+};
 
 export default TextInputWithLabel;

@@ -30,7 +30,7 @@ const LeftSideBar = ({ onMenuClick }: { onMenuClick: (menuLabel: string) => void
   ];
 
   return (
-    <div className="mt-10 pl-8">
+    <div className="left-side-panel mt-10 pl-8">
       <div className="flex flex-col gap-6">
         {navMenu.map((menu) => {
           const isActive = pathname === menu.href;

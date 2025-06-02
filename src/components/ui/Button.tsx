@@ -8,7 +8,7 @@ interface ButtonProps {
 const Button = ({ buttonName, className }: ButtonProps) => {
   return (
     <button
-      className={`btn-primary w-full px py-2.5 rounded-[5px] shadow-primary-button-shadow font-bold text-white text-2xl ${className || ''}`}>
+      className={`btn-primary w-full max-w-[35rem] px py-2.5 rounded-[5px] shadow-primary-button-shadow font-bold text-white text-2xl ${className || ''}`}>
       {buttonName}
     </button>
   );

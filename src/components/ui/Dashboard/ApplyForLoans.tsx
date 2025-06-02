@@ -43,9 +43,9 @@ const ApplyForLoans = () => {
   ];
 
   return (
-    <div className="w-3/5 bg-white shadow-2xl rounded-md p-5 mb-5">
+    <div className="w-full bg-white shadow-2xl rounded-md p-5 mb-5">
       <FormSectionTitle title="Loan Details" className="" />
-      <div className="flex gap-x-16">
+      <div className="flex gap-x-10 gap-y-6 w- flex-wrap">
         {loanDetailsFields.map((field) =>
           field.type === 'select' ? (
             <SelectWithLabel
@@ -67,11 +67,11 @@ const ApplyForLoans = () => {
         )}
       </div>
 
-      <div className="mt-2">
+      <div className="mt-2 flex flex-col max-md:justify-center">
         <TandC />
       </div>
 
-      <div className="mt-6 w-1/2">
+      <div className="mt-6 w-full md:w-2/3 lg:w-1/2">
         <Link href="/dashboardPage/1/Individual-profile" legacyBehavior>
           <a className="">
             <Button buttonName={'Submit'} className=" px-2 my-6" />{' '}
@@ -83,7 +83,7 @@ const ApplyForLoans = () => {
 
       <FormSectionTitle title="Loan Calculator" className="" />
       <p>Use this loan calculator to find out your monthly repayment rate.</p>
-      <div className="flex gap-x-12 mt-6">
+      <div className="flex gap-x-10 gap-y-6 mt-5 flex-wrap">
         {loanCalculatorFields.map((field) =>
           field.type === 'select' ? (
             <SelectWithLabel
@@ -105,8 +105,8 @@ const ApplyForLoans = () => {
         )}
       </div>
 
-      <div className="mt-2 w-1/2">
-        <Button buttonName="Calculate Loan" className="w-[25rem]" />
+      <div className="mt-6 w-full md:w-2/3 lg:w-1/2">
+        <Button buttonName="Calculate Loan" className="w-[25rem] text-[1rem]" />
       </div>
 
       <FormSectionTitle title="Pending Loans" className="mt-8" />

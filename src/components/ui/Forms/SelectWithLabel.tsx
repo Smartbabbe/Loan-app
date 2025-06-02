@@ -5,6 +5,7 @@ interface SelectWithLabelProps {
   label: string;
   options: string[];
   placeholder?: string;
+  className?: string;
 }
 
 const SelectWithLabel: React.FC<SelectWithLabelProps> = ({
@@ -12,16 +13,17 @@ const SelectWithLabel: React.FC<SelectWithLabelProps> = ({
   label,
   options,
   placeholder = 'Please select',
+  className = '',
 }) => {
   return (
-    <div className="flex flex-col w-[250px]">
-      <label htmlFor={id} className="font text-[#00160a] text-md">
+    <div className={`flex flex-col w-full max-w-[10rem] md:max-w-[18rem] ${className}`}>
+      <label htmlFor={id} className="text-[#00160a] text-sm sm:text-base mb-1">
         {label}
       </label>
       <select
         id={id}
-        defaultValue="" 
-        className="h-[35px] outline-none mt-4 mb-8 bg-gray-100 rounded-[2px] border-none"
+        defaultValue=""
+        className="px-3 py-2 text-sm sm:text-base bg-gray-100 rounded outline-none"
       >
         <option value="" disabled>
           {placeholder}
