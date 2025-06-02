@@ -104,7 +104,7 @@ const DashboardPageWrapper: React.FC<DashboardPageWrapperProps> = ({
     <DashboardLayout>
       <DashboardHeader 
         headertitle={headerTitle || activeMenu} 
-        className="max-md:text-2xl" 
+        className="max-md:text-xl" 
         onMenuButtonClick={toggleLeftSide} // Pass the toggle function
       />
       <LeftRightLayout
